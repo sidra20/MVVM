@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var vm:ViewModelTip
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
         vm = ViewModelProvider(this).get(ViewModelTip::class.java)
