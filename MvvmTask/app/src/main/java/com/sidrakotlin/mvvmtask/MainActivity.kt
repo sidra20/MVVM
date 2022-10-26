@@ -12,13 +12,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var vm:ViewModelTip
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
         vm = ViewModelProvider(this).get(ViewModelTip::class.java)
 
 
-        binding.tipText.text = "Tip: Rs. " + vm.tip
+        binding.tipText.text = "Tip Amount: $ " + vm.tip
 
         binding.calBtn.setOnClickListener {
             var costAmount = binding.costEdittext.text.toString()
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             else{
                 vm.cost=costAmount.toDouble()
                 vm.cal()
-                binding.tipText.text = "Tip: Rs. " + vm.tip
+                binding.tipText.text = "Tip Amount: $ " + vm.tip
             }
 
 
