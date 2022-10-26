@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sidrakotlin.mvvmtask.ViewModelTip" />
+    </data>
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:gravity="center_horizontal"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Tip"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/costEdittext"
+                android:inputType="number"
+                android:hint="Cost Amount"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="25dp"
+            android:textSize="17sp"
+            android:id="@+id/tipText"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calBtn"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:text="Calculate"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
+
+</layout>
