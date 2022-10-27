@@ -20,25 +20,28 @@ class TipActivity :AppCompatActivity() {
         //view model
         viewModel = ViewModelProvider(this).get(TipViewModel::class.java)
 
-        binding.calBtn.setOnClickListener {
-            var cost = binding.costAmt.text.toString()
-
-            if(cost.isEmpty())
-            {
-                Toast.makeText(this, "Required!", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                viewModel.costOfService=cost.toDouble()
-                viewModel.calcTip()
-            }
-
-        }
-
-
-
-
         binding.tipModel=viewModel
         binding.lifecycleOwner=this
+
+//        binding.calBtn.setOnClickListener {
+////            var cost = binding.costAmt.text.toString()
+////
+////            if(cost.isEmpty())
+////            {
+////                Toast.makeText(this, "Required!", Toast.LENGTH_SHORT).show()
+////            }
+////            else{
+////                viewModel.costOfService=cost.toDouble()
+////                viewModel.calcTip()
+////            }
+//            viewModel.calcTip()
+//
+//        }
+
+
+
+
+
 
 
     }

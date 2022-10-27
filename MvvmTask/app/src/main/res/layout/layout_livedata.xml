@@ -39,6 +39,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/costAmt"
                     android:inputType="number"
+                    android:text="@={tipModel.costOfService}"
                     android:hint="Cost of Service"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,6 +78,7 @@
                 android:backgroundTint="@color/black"
                 android:textColor="@color/white"
                 android:text="Calculate"
+                android:onClick="@{()->tipModel.calcTip()}"
                 android:layout_marginTop="20dp"/>
 
         </LinearLayout>
