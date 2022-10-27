@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         vm = ViewModelProvider(this).get(ViewModelTip::class.java)
 
 
-        binding.tipText.text = "Tip Amount: $ " + vm.tip
+//        binding.tipText.text = "Tip Amount: $ " + vm.tip
 
         binding.calBtn.setOnClickListener {
             var costAmount = binding.costEdittext.text.toString()

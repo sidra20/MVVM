@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 
 class ViewModelTip:ViewModel() {
 
-    var cost = 0.0
+    var cost:Double ?= null
     var tip = 0.0
 
 
@@ -13,7 +13,7 @@ class ViewModelTip:ViewModel() {
 //        tip.toDouble()
 //        cost.toDouble()
 
-        tip = cost*15/100
+        tip = cost!! *15/100
     }
 
     fun tipAmount():Double{
