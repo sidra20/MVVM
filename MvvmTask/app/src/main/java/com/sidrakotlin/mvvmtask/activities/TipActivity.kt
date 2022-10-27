@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.sidrakotlin.mvvmtask.R
 import com.sidrakotlin.mvvmtask.databinding.LayoutLivedataBinding
@@ -20,8 +21,13 @@ class TipActivity :AppCompatActivity() {
         //view model
         viewModel = ViewModelProvider(this).get(TipViewModel::class.java)
 
+
         binding.tipModel=viewModel
         binding.lifecycleOwner=this
+
+        viewModel.costOfService.observe(this, Observer {
+            Toast.makeText(this, "Click button to calculate tip of " + it , Toast.LENGTH_SHORT).show()
+        })
 
 //        binding.calBtn.setOnClickListener {
 ////            var cost = binding.costAmt.text.toString()
