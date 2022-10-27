@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 
 class ViewModelTip:ViewModel() {
 
+
     var cost:Double ?= null
     var tip = 0.0
 
